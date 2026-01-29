@@ -66,3 +66,56 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.task-list {
+  width: 450px;
+  margin: 30px auto;
+}
+
+.task-item {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.task-item li {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  position: relative;
+  color: #2e251f;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.task-item li:hover {
+  border-color: #e8dfd6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.btn-edit, .btn-delete {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-edit {
+  right: 35px;
+  color: #8c7d73;
+}
+
+.btn-delete {
+  right: 10px;
+  color: #D57859;
+}
+
+.btn-edit:hover {
+  color: #5a4d44;
+}
+
+.btn-delete:hover {
+  color: #b34c32;
+}
