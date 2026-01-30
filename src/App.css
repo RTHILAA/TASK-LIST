@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +7,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #FAF8F5;
+  font-family: "Poppins", sans-serif;
+  background-color: #faf8f5;
 }
 
 .title {
@@ -17,7 +18,7 @@ body {
 }
 
 .title h1 {
-  color:#2e251f
+  color: #2e251f;
 }
 
 .title p {
@@ -36,13 +37,13 @@ body {
 
 .form input {
   border: 1px solid white;
-  border-radius: 10px ;
+  border-radius: 10px;
   padding: 25px 60px;
   width: 450px;
   color: #2e251f;
   font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
 }
 
 .form input:focus {
@@ -56,13 +57,13 @@ body {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  background-color: #D57859;
+  background-color: #d57859;
   border: none;
   color: white;
-  border-radius: 50%;         
-  width: 40px;          
-  height: 40px;            
-  display: flex;           
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -94,7 +95,8 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-.btn-edit, .btn-delete {
+.btn-edit,
+.btn-delete {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -109,7 +111,7 @@ body {
 
 .btn-delete {
   right: 10px;
-  color: #D57859;
+  color: #d57859;
 }
 
 .btn-edit:hover {
