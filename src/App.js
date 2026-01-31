@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function App() {
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState({});
+  const [editId, setEditId] = useState(null);
 
   const handleChange = (e) => {
     const id = e.target.id;
@@ -15,8 +16,14 @@ export default function App() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTask = { ...task, id: Date.now() };
-    setTasks([...tasks, newTask]);
+    if (editId) {
+      const updatedTasks = tasks.map((task) => (task.id === editId ? { ...task, id: editId } : task));
+      setTasks(updatedTasks);
+      setEditId(null);
+    } else {
+      const newTask = { ...task, id: Date.now() };
+      setTasks([...tasks, newTask]);
+    }
     setTask({});
   };
 
@@ -26,9 +33,10 @@ export default function App() {
 
   const handleEdit = (id) => {
     setTask(tasks.find((task) => task.id === id));
+    setEditId(id);
   };
 
-  return (
+  return ( 
     <div className="App">
       <div className="title">
         <h1>Today's Tasks</h1>
