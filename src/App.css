@@ -121,3 +121,189 @@ body {
 .btn-delete:hover {
   color: #b34c32;
 }
+
+/* Toaster Custom Styles */
+.Toastify__toast {
+  font-family: "Poppins", sans-serif !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background-color: white;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  background-color: #fef2f2;
+  padding: 20px;
+  border-bottom: 1px solid #fecaca;
+}
+
+.modal-header h3 {
+  color: #b91c1c;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-content {
+  padding: 25px;
+  color: #2e251f;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.task-name {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #d57859;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.warning-text {
+  color: #b91c1c;
+  font-size: 14px !important;
+  font-weight: 500;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 20px;
+  border-top: 1px solid #e8dfd6;
+  background-color: #faf8f5;
+}
+
+.btn-cancel {
+  padding: 12px 25px;
+  background-color: white;
+  border: 1px solid #d4c4b6;
+  border-radius: 8px;
+  color: #5a4d44;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #f8f9fa;
+  border-color: #8c7d73;
+}
+
+.btn-confirm-delete {
+  padding: 12px 25px;
+  background-color: #d57859;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-confirm-delete:hover {
+  background-color: #b34c32;
+}
+
+/* Editing badge */
+.editing-badge {
+  position: absolute;
+  left: 25px;
+  top: -10px;
+  background-color: #e8f4ff;
+  color: #0066cc;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #b3d9ff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Placeholder color when editing */
+.form input::placeholder {
+  color: #8c7d73;
+  transition: color 0.2s ease;
+}
+
+.form input:focus::placeholder {
+  color: #a99e94;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .task-list {
+    width: 90%;
+  }
+  
+  .form input {
+    width: 90vw;
+    max-width: 400px;
+  }
+  
+  .modal {
+    width: 95%;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .btn-cancel,
+  .btn-confirm-delete {
+    width: 100%;
+  }
+}
