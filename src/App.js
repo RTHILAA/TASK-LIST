@@ -1,12 +1,21 @@
 import React from "react";
 import "./App.css";
 import { Plus, Trash2, Pencil } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    // تحميل المهام من localStorage عند التهيئة
+    const savedTasks = localStorage.getItem("tasks");
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
   const [task, setTask] = useState({});
   const [editId, setEditId] = useState(null);
+
+  // حفظ المهام في localStorage عند أي تغيير
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const handleChange = (e) => {
     const id = e.target.id;
@@ -16,8 +25,12 @@ export default function App() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!task.tsk || task.tsk.trim() === "") return;
+    
     if (editId) {
-      const updatedTasks = tasks.map((task) => (task.id === editId ? { ...task, id: editId } : task));
+      const updatedTasks = tasks.map((t) => 
+        t.id === editId ? { ...task, id: editId } : t
+      );
       setTasks(updatedTasks);
       setEditId(null);
     } else {
@@ -32,7 +45,8 @@ export default function App() {
   };
 
   const handleEdit = (id) => {
-    setTask(tasks.find((task) => task.id === id));
+    const taskToEdit = tasks.find((task) => task.id === id);
+    setTask({ tsk: taskToEdit.tsk });
     setEditId(id);
   };
 
@@ -40,7 +54,7 @@ export default function App() {
     <div className="App">
       <div className="title">
         <h1>Today's Tasks</h1>
-        <p>{tasks.length === 0 ? "All tasks completed" : tasks.length === 1 ? "1 task remaining" : `${tasks.length} tasks remaining `}</p>
+        <p>{tasks.length === 0 ? "All tasks completed" : tasks.length === 1 ? "1 task remaining" : `${tasks.length} tasks remaining`}</p>
       </div>
       <div className="task">
         <form method="post" className="form" onSubmit={handleSubmit}>
