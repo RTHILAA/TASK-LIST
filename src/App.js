@@ -26,16 +26,16 @@ export default function App() {
     const value = e.target.value;
     setTask({ ...task, [id]: value });
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!task.tsk || task.tsk.trim() === "") {
       toast.error("Please enter a task");
       return;
     }
-    
+
     if (editId) {
-      const updatedTasks = tasks.map((t) => 
+      const updatedTasks = tasks.map((t) =>
         t.id === editId ? { ...task, id: editId } : t
       );
       setTasks(updatedTasks);
@@ -72,8 +72,6 @@ export default function App() {
     const taskToEdit = tasks.find((task) => task.id === id);
     setTask({ tsk: taskToEdit.tsk });
     setEditId(id);
-    
-    // استخدام أيقونة Pencil من lucide-react
     toast("Edit mode activated", {
       icon: <Pencil size={16} />,
       style: {
@@ -83,7 +81,7 @@ export default function App() {
     });
   };
 
-  return ( 
+  return (
     <div className="App">
       <Toaster
         position="top-right"
@@ -148,7 +146,7 @@ export default function App() {
         <h1>Today's Tasks</h1>
         <p>{tasks.length === 0 ? "All tasks completed" : tasks.length === 1 ? "1 task remaining" : `${tasks.length} tasks remaining`}</p>
       </div>
-      
+
       <div className="task">
         <form method="post" className="form" onSubmit={handleSubmit}>
           <input
