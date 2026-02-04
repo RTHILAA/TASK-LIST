@@ -51,6 +51,15 @@ body {
   border: 1px solid #d4c4b6;
 }
 
+.form input::placeholder {
+  color: #8c7d73;
+  transition: color 0.2s ease;
+}
+
+.form input:focus::placeholder {
+  color: #a99e94;
+}
+
 .btn-submit {
   position: absolute;
   left: 10px;
@@ -122,14 +131,6 @@ body {
   color: #b34c32;
 }
 
-/* Toaster Custom Styles */
-.Toastify__toast {
-  font-family: "Poppins", sans-serif !important;
-  border-radius: 10px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -252,7 +253,6 @@ body {
   background-color: #b34c32;
 }
 
-/* Editing badge */
 .editing-badge {
   position: absolute;
   left: 25px;
@@ -273,17 +273,6 @@ body {
   100% { opacity: 1; }
 }
 
-/* Placeholder color when editing */
-.form input::placeholder {
-  color: #8c7d73;
-  transition: color 0.2s ease;
-}
-
-.form input:focus::placeholder {
-  color: #a99e94;
-}
-
-/* Responsive adjustments */
 @media (max-width: 480px) {
   .task-list {
     width: 90%;
