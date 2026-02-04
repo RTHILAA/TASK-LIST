@@ -6,7 +6,7 @@ A modern, responsive task management application built with React that allows us
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![React](https://img.shields.io/badge/react-19.0+-61dafb.svg)
 
-## 🎯 Live Demo : 
+## 🎯 Live Demo 
 
 🔗 [Task List](https://rthh-todays-tasks.netlify.app/)
 
