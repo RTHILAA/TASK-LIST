@@ -68,8 +68,6 @@ The app will open in your default browser at `http://localhost:3000`
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
-
 ```
 task-list-app/
 ├── public/
@@ -143,16 +141,16 @@ You can easily customize the app by modifying:
 
 Potential features for future development:
 
-- * Task categories or tags
-- * Due date reminders
-- * Task priority levels
-- * Export/import tasks (JSON/CSV)
-- * Keyboard shortcuts
-- * Search/filter tasks
-- * Task notes/description
-- * Subtasks support
-- * Multiple task lists
-- * Share tasks via link
+- Task categories or tags
+- Due date reminders
+- Task priority levels
+- Export/import tasks (JSON/CSV)
+- Keyboard shortcuts
+- Search/filter tasks
+- Task notes/description
+- Subtasks support
+- Multiple task lists
+- Share tasks via link
 
 ## 🤝 Contributing
 
@@ -164,10 +162,10 @@ This project is open source and available for personal and commercial use.
 
 ## 🙏 Acknowledgments
 
-- * Icons by [Lucide](https://lucide.dev)
-- * Fonts by [Google Fonts](https://fonts.google.com)
-- * Toast notifications by [React Hot Toast](https://react-hot-toast.com)
-- * Drag and Drop by [@hello-pangea/dnd](https://github.com/hello-pangea/dnd)
+- Icons by [Lucide](https://lucide.dev)
+- Fonts by [Google Fonts](https://fonts.google.com)
+- Toast notifications by [React Hot Toast](https://react-hot-toast.com)
+- Drag and Drop by [@hello-pangea/dnd](https://github.com/hello-pangea/dnd)
 
 ## 📞 Contact :
 
